@@ -6,7 +6,9 @@ lib-cov
 *.out
 *.pid
 *.gz
+*.mp3
 
+.DS_Store
 pids
 logs
 results

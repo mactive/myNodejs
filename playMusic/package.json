@@ -1,0 +1,26 @@
+{
+  "name": "player",
+  "version": "0.0.1",
+  "description": "rpi nodejs music player",
+  "main": "webplayer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mactive/myNodejs.git"
+  },
+  "keywords": [
+    "rpi",
+    "mp3"
+  ],
+  "author": "mactive",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/turingou/myNodejs/issues"
+  },
+  "dependencies": {
+    "speaker": "*",
+    "lame": "*"
+  }
+}
