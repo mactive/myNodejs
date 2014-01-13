@@ -1,0 +1,517 @@
+<base href="http://www.boc.cn/">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>中国银行全球门户网站：外汇牌价</title>
+<link href="../images/boc08.css" rel="stylesheet" type="text/css">
+<link href="/favicon.ico" rel="Shortcut Icon" type="image/x-icon">
+<link href="/favicon.ico" rel="Bookmark" type="image/x-icon"> 
+<style>
+.lan16c {
+	font-family: "宋体";
+	font-size: 16px;
+	font-weight: bold;
+	color: #355f72;
+	text-decoration: none;
+} 
+.hei12c {
+	font-family: "宋体";
+	font-size: 12px; 
+	text-decoration: none;
+} 
+</style>
+<script>
+function Disp_Date(){
+   var o_today;
+   var n_day;
+   var s_day;
+   
+   o_today = new Date();
+   n_day= o_today.getDay();
+   switch (n_day){
+	case 0: s_day = "星期日"; break;
+	case 1: s_day = "星期一"; break;
+	case 2: s_day = "星期二"; break;
+	case 3: s_day = "星期三"; break;
+	case 4: s_day = "星期四"; break;
+	case 5: s_day = "星期五"; break;
+	case 6: s_day = "星期六"; break;
+   }
+document.write(o_today.getFullYear()+"年"+(o_today.getMonth()+1)+"月"+o_today.getDate()+"日  "+s_day);
+}
+
+function getNav(nCurrentPage,nCountPage,sPageName,sPageEXT)
+{ 
+	var currentPage = nCurrentPage;
+	var prevPage = currentPage-1;
+	var nextPage = currentPage+1;
+	var countPage = nCountPage;
+	document.write("共"+countPage+"页&nbsp;&nbsp;");
+
+	//set prevPage
+	if(countPage>1&&currentPage!=0&&currentPage!=1)
+		document.write("<a href=\"/sourcedb/whpj/"+sPageName+"."+sPageEXT+"\" class='nav'>首页</a>&nbsp;<a href=\"/sourcedb/whpj/"+sPageName+"_" + prevPage + "."+sPageEXT+"\" class='nav'>上一页</a>&nbsp;");
+	else if(countPage>1&&currentPage!=0&&currentPage==1)
+		document.write("<a href=\"/sourcedb/whpj/"+sPageName+"."+sPageEXT+"\" class='nav'>首页</a>&nbsp;<a href=\"/sourcedb/whpj/"+sPageName+"."+sPageEXT+"\" class='nav'>上一页</a>&nbsp;");
+	else
+		document.write("首页&nbsp;上一页&nbsp;");
+	//循环
+	var num = 9;
+	for(var i=0+(currentPage-1-(currentPage-1)%num) ; i<=(num+(currentPage-1-(currentPage-1)%num))&&(i<countPage) ; i++){
+		if(currentPage==i)
+			document.write("<span style=\"color:#FF0000;\">"+(i+1)+"</span>&nbsp;");
+		else if(i==0)
+			document.write("<a href=\"/sourcedb/whpj/"+sPageName+"."+sPageEXT+"\" class='nav'>"+(i+1)+"</a>&nbsp;");
+		else
+			document.write("<a href=\"/sourcedb/whpj/"+sPageName+"_" + i + "."+sPageEXT+"\" class='nav'>"+(i+1)+"</a>&nbsp;");
+	}
+	
+	//设置下一页代码 
+	if(countPage>1&&currentPage!=(countPage-1))
+		document.write("<a href=\"/sourcedb/whpj/"+sPageName+"_" + nextPage + "."+sPageEXT+"\" class='nav'>下一页</a>&nbsp;<a href=\"/sourcedb/whpj/"+sPageName+"_" + (countPage-1) + "." + sPageEXT+"\" class='nav'>尾页</a>&nbsp;");
+	else
+		document.write("下一页&nbsp;尾页&nbsp;");
+
+}
+</script>
+</head>
+
+<body>
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="15" height="180" align="right" class="pbrdl"><img src="./images/boc08_line2.jpg" width="6" height="180" hspace="1"></td>
+    <td width="661" valign="bottom" background="./images/boc08_r11.jpg"><table width="661" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="150" valign="top"><a href="/index.html"><img src="./images/bankofchina_LOGO.gif" width="183" height="52" hspace="25" vspace="20" border="0"></a></td>
+      </tr>
+      <tr>
+        <td height="25" align="right" background="./images/boc08_line1.gif" class="navl">
+				| <a href="/cbservice/" class='nav'>公司金融服务</a>
+				| <a href="/pbservice/" class='nav'>个人金融服务</a>
+				| <a href="/bcservice/" class='nav'>银行卡服务</a>
+				| <a href="/ebanking/" class='nav'>电子银行服务</a>
+				| <a href="/bocinfo/" class='nav'>中行信息</a>
+				| <a href="/aboutboc/" class='nav'>关于中行</a>
+				| <a href="/invester/" class='nav'>投资者关系</a>
+				| <a href="/finadata/" class='nav'>金融数据</a>
+			|&nbsp;&nbsp;</td>
+      </tr>
+    </table></td>
+    <td width="251" valign="top" background="./images/boc08_r12.jpg"><table width="250" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="25" align="center" class="laugl"><a href="/index.html" class="laug">简体中文</a> | <a href="/big5/index.html" class="laug">繁体中文</a> | <a href="/en/index.html" class="laug">ENGLISH</a></td>
+      </tr>
+      
+      <tr>
+        <td height="85" align="center" valign="bottom">
+<iframe name="searchframe"  src="http://srh.bankofchina.com/search/sitesearch/siteiframe.jsp" frameborder=0 width="100%" height="24" scrolling="no"></iframe>
+</td>
+      </tr>
+      <tr>
+        <td height="67" align="center"><br/><span class="laugl"><script>Disp_Date();</script></span></td>
+      </tr>
+	  <tr>
+        <td bgcolor="#b10a32"><img src="./images/dot.gif" width="2" height="3"></td>
+      </tr>  
+    </table></td>
+    <td width="23" class="pbrdr"><img src="./images/boc08_line2.jpg" width="9" height="180" hspace="4"></td>
+  </tr>
+</table>
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="15" class="pbrdl">&nbsp;</td>
+    <td width="907" height="200" valign="top">
+    <table width="907" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="15">&nbsp;</td>
+        <td width="155" rowspan="2" class="itmen"><span class="lan16c">当日牌价</span></td> 
+      </tr>
+      <tr>
+        <td width="881" height="30" background="./images/boc08_line3.gif" class="navl">&nbsp;&nbsp;当前位置： 
+          <a href="/" class='nav'>首页</a>&nbsp;>>&nbsp;当日牌价</td>
+        <td width="26" background="./images/boc08_line3.gif">&nbsp;</td>
+      </tr>
+    </table> 
+	<table width="907" border="0" cellspacing="0" cellpadding="5">
+		<tr>
+			<td height="30" align="right" valign="middle"><b><a href="http://www.bankofchina.com/sourcedb/lswhpj/" class="laug">&gt;&gt;&gt;往日外汇牌价搜索</a>&nbsp;&nbsp;&nbsp;&nbsp;</b></td>
+		</tr>
+	</table>
+		  
+	<table width="810" border="0" cellpadding="5" cellspacing="0" bgcolor="#F2F2F2" align="center">
+		<tr>
+			<td align="center" valign="top">
+				<table width="800" border="0" cellpadding="5" cellspacing="1" bgcolor="#EAEAEA">
+                        <tr>
+                          <th width="88" bgcolor="#EFEFEF">货币名称</th>
+                          <th width="88" bgcolor="#EFEFEF">现汇买入价</th>
+                          <th width="88" bgcolor="#EFEFEF">现钞买入价</th>
+                          <th width="88" bgcolor="#EFEFEF">现汇卖出价</th>
+						  <th width="88" bgcolor="#EFEFEF">现钞卖出价</th>
+						  <th width="88" bgcolor="#EFEFEF">中行折算价</th>
+                          <th width="93" bgcolor="#EFEFEF">发布日期</th>
+                          <th width="90" bgcolor="#EFEFEF">发布时间</th>
+                        </tr>
+                   
+                      
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">澳大利亚元</td>
+                            <td bgcolor="#FFFFFF">536.83</td>
+                            <td bgcolor="#FFFFFF">520.27</td>
+                            <td bgcolor="#FFFFFF">540.61</td>
+							<td bgcolor="#FFFFFF">540.61</td>
+							<td bgcolor="#FFFFFF">542.12</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">加拿大元</td>
+                            <td bgcolor="#FFFFFF">566.48</td>
+                            <td bgcolor="#FFFFFF">549</td>
+                            <td bgcolor="#FFFFFF">571.04</td>
+							<td bgcolor="#FFFFFF">571.04</td>
+							<td bgcolor="#FFFFFF">573.21</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">瑞士法郎</td>
+                            <td bgcolor="#FFFFFF">675.73</td>
+                            <td bgcolor="#FFFFFF">654.86</td>
+                            <td bgcolor="#FFFFFF">681.15</td>
+							<td bgcolor="#FFFFFF">681.15</td>
+							<td bgcolor="#FFFFFF">678.55</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">丹麦克朗</td>
+                            <td bgcolor="#FFFFFF">111.13</td>
+                            <td bgcolor="#FFFFFF">107.7</td>
+                            <td bgcolor="#FFFFFF">112.03</td>
+							<td bgcolor="#FFFFFF">112.03</td>
+							<td bgcolor="#FFFFFF">111.6</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">欧元</td>
+                            <td bgcolor="#FFFFFF">829.05</td>
+                            <td bgcolor="#FFFFFF">803.45</td>
+                            <td bgcolor="#FFFFFF">835.71</td>
+							<td bgcolor="#FFFFFF">835.71</td>
+							<td bgcolor="#FFFFFF">839.37</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">英镑</td>
+                            <td bgcolor="#FFFFFF">999.49</td>
+                            <td bgcolor="#FFFFFF">968.63</td>
+                            <td bgcolor="#FFFFFF">1007.51</td>
+							<td bgcolor="#FFFFFF">1007.51</td>
+							<td bgcolor="#FFFFFF">1011.18</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">港币</td>
+                            <td bgcolor="#FFFFFF">77.88</td>
+                            <td bgcolor="#FFFFFF">77.26</td>
+                            <td bgcolor="#FFFFFF">78.18</td>
+							<td bgcolor="#FFFFFF">78.18</td>
+							<td bgcolor="#FFFFFF">78.66</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">印尼卢比</td>
+                            <td bgcolor="#FFFFFF"></td>
+                            <td bgcolor="#FFFFFF">0.0479</td>
+                            <td bgcolor="#FFFFFF"></td>
+							<td bgcolor="#FFFFFF">0.0513</td>
+							<td bgcolor="#FFFFFF">0.0496</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">日元</td>
+                            <td bgcolor="#FFFFFF">5.7263</td>
+                            <td bgcolor="#FFFFFF">5.5496</td>
+                            <td bgcolor="#FFFFFF">5.7665</td>
+							<td bgcolor="#FFFFFF">5.7665</td>
+							<td bgcolor="#FFFFFF">5.7827</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">韩国元</td>
+                            <td bgcolor="#FFFFFF"></td>
+                            <td bgcolor="#FFFFFF">0.5559</td>
+                            <td bgcolor="#FFFFFF"></td>
+							<td bgcolor="#FFFFFF">0.6029</td>
+							<td bgcolor="#FFFFFF">0.576</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">澳门元</td>
+                            <td bgcolor="#FFFFFF">75.67</td>
+                            <td bgcolor="#FFFFFF">73.13</td>
+                            <td bgcolor="#FFFFFF">75.96</td>
+							<td bgcolor="#FFFFFF">78.39</td>
+							<td bgcolor="#FFFFFF">75.78</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">林吉特</td>
+                            <td bgcolor="#FFFFFF">183.48</td>
+                            <td bgcolor="#FFFFFF"></td>
+                            <td bgcolor="#FFFFFF">184.76</td>
+							<td bgcolor="#FFFFFF"></td>
+							<td bgcolor="#FFFFFF">185.27</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">挪威克朗</td>
+                            <td bgcolor="#FFFFFF">100.08</td>
+                            <td bgcolor="#FFFFFF">96.99</td>
+                            <td bgcolor="#FFFFFF">100.88</td>
+							<td bgcolor="#FFFFFF">100.88</td>
+							<td bgcolor="#FFFFFF">100.5</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">新西兰元</td>
+                            <td bgcolor="#FFFFFF">494.86</td>
+                            <td bgcolor="#FFFFFF">479.58</td>
+                            <td bgcolor="#FFFFFF">498.84</td>
+							<td bgcolor="#FFFFFF">501.82</td>
+							<td bgcolor="#FFFFFF">497.11</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">菲律宾比索</td>
+                            <td bgcolor="#FFFFFF">13.62</td>
+                            <td bgcolor="#FFFFFF">13.19</td>
+                            <td bgcolor="#FFFFFF">13.72</td>
+							<td bgcolor="#FFFFFF">14.15</td>
+							<td bgcolor="#FFFFFF">13.66</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">卢布</td>
+                            <td bgcolor="#FFFFFF">18.36</td>
+                            <td bgcolor="#FFFFFF">17.84</td>
+                            <td bgcolor="#FFFFFF">18.5</td>
+							<td bgcolor="#FFFFFF">19.11</td>
+							<td bgcolor="#FFFFFF">18.47</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">瑞典克朗</td>
+                            <td bgcolor="#FFFFFF">93.66</td>
+                            <td bgcolor="#FFFFFF">90.77</td>
+                            <td bgcolor="#FFFFFF">94.42</td>
+							<td bgcolor="#FFFFFF">94.42</td>
+							<td bgcolor="#FFFFFF">94.06</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">新加坡元</td>
+                            <td bgcolor="#FFFFFF">476.24</td>
+                            <td bgcolor="#FFFFFF">461.53</td>
+                            <td bgcolor="#FFFFFF">480.06</td>
+							<td bgcolor="#FFFFFF">480.06</td>
+							<td bgcolor="#FFFFFF">478.46</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">泰国铢</td>
+                            <td bgcolor="#FFFFFF">18.33</td>
+                            <td bgcolor="#FFFFFF">17.76</td>
+                            <td bgcolor="#FFFFFF">18.47</td>
+							<td bgcolor="#FFFFFF">19.04</td>
+							<td bgcolor="#FFFFFF">18.4</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">新台币</td>
+                            <td bgcolor="#FFFFFF"></td>
+                            <td bgcolor="#FFFFFF">19.88</td>
+                            <td bgcolor="#FFFFFF"></td>
+							<td bgcolor="#FFFFFF">21.32</td>
+							<td bgcolor="#FFFFFF">20.6</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					  
+						  <tr align="center">
+                            <td bgcolor="#FFFFFF">美元</td>
+                            <td bgcolor="#FFFFFF">603.89</td>
+                            <td bgcolor="#FFFFFF">599.05</td>
+                            <td bgcolor="#FFFFFF">606.31</td>
+							<td bgcolor="#FFFFFF">606.31</td>
+							<td bgcolor="#FFFFFF">609.9</td>
+                            <td bgcolor="#FFFFFF">2014-01-02</td> 
+                            <td bgcolor="#FFFFFF">09:42:04</td>  
+						  </tr>
+					
+                        
+					</table>
+			</td>
+		</tr> 
+	</table> 
+	<table width="810" border="0" cellpadding="5" cellspacing="0" align="center">
+		<tr>
+			  	<td height="30" align="center"><script>
+  	getNav(0,10,"index","html");
+  </script>&nbsp;&nbsp;&nbsp;<b><a href="http://www.bankofchina.com/sourcedb/lswhpj/" class="lan12_hover">往日外汇牌价搜索</a></b></td> 
+		</tr>
+	</table>
+        <table width="810" border="0" cellpadding="5" cellspacing="0" align="center">
+		<tr>
+	              <td height="70" class='nav'>
+
+中国银行外汇牌价网页声明：<br>
+1.本汇率表仅供参考，客户办理结/购汇业务时，应以中国银行网上银行或网点柜台实际交易汇率为准，对使用该汇率表所导致的结果，中国银行不承担任何责任； <br>
+2.未经中国银行许可，不得以商业目的转载本汇率表的全部或部分内容，如需引用相关数据，应注明来源于中国银行； <br>
+3.中国银行外汇牌价业务系统于2011年10月30日进行了升级，本汇率表原有的“卖出价”细分为“现汇卖出价”和“现钞卖出价”，此前各货币的“卖出价”均显示在“现汇卖出价”项下； <br>
+4.现中国银行在部分网点提供韩元、卢布及印度尼西亚卢比现钞兑换服务，客户如有需要，可向中国银行当地分支机构查询或拨打中国银行客户服务电话询问。<br>
+
+</td> 
+		</tr>
+	</table>
+    </td> 
+    <td width="4" background="./images/boc08_brd3.gif"><img src="./images/boc08_brd3.gif"></td>
+    <td width="23" valign="bottom" class="pbrdr"><img src="./images/boc08_doth.gif" width="5" height="1"></td>
+  </tr>
+</table>
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="15" class="pbrdl">&nbsp;</td>
+    <td width="661" align="right"><table width="657" border="0" cellspacing="0" cellpadding="0" class="brd1" background="./images/boc08_line6.gif">
+      <tr>
+        <td height="75"><table width="620" border="0">
+          <tr>
+            <td align="left" class="laugl">&nbsp;
+                
+                  <a href="/custserv/cs1/200812/t20081209_135605.html" class='laug'>网站地图</a>
+                  | 
+                  <a href="/custserv/cs1/200812/t20081209_135606.html" class='laug'>版权声明</a>
+                  | 
+                  <a href="/custserv/cs1/200812/t20081209_135607.html" class='laug'>使用条款</a>
+                  | 
+                  <a href="/custserv/cs1/200812/t20081212_257687.html" class='laug'>联系我们</a>
+                  | 
+              <span class="laugl">京ICP证 060399号</span></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+    <td width="246" align="center" valign="top" class="brd1"><img src="./images/boc08_95566.gif" width="99" height="52"></td>
+    <td width="4" background="./images/boc08_brd3.gif"><img src="./images/boc08_brd3.gif" width="4" height="2"></td>
+    <td width="23" class="pbrdr"><table width="2" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="75" bgcolor="#F3F3F3"><img src="./images/dot.gif" width="2" height="1"></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<table width="950" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="15" class="pbrdl">&nbsp;</td>
+    <td width="661" align="right"><table width="657" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="40" align="right" valign="top" bgcolor="#F3F3F3" class="brd1"><span class="copyrt">Copyright
+          &copy; BANK OF CHINA(BOC) All Rights Reserved.</span><img src="./images/bankofchina_LOGO.gif" width="90" hspace="10" align="absmiddle"></td>
+      </tr>
+    </table></td>
+    <td width="251" valign="top" bgcolor="#EEEEEE"><img src="./images/boc08_r8.gif" width="251" height="25"></td>
+    <td width="23" class="pbrdr"><table width="2" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="40" bgcolor="#F3F3F3"><img src="./images/dot.gif" width="2" height="1"></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="pbrdl"><img src="./images/boc08_brd1.gif" width="15" height="2"></td>
+    <td colspan="2" align="right" valign="top" height="8"><table width="907" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#CAC8C9"><img src="./images/dot.gif" width="1" height="1"></td>
+      </tr>
+    </table></td>
+    <td valign="top" class="pbrdr"><img src="./images/boc08_doth.gif" width="5" height="1"></td>
+  </tr>
+</table>
+</body>
+</html>

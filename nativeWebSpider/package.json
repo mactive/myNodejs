@@ -1,0 +1,12 @@
+{
+	"name":"sample-web-spider",
+	"version":"0.1.0",
+	"author":"mactive",
+	"description": "a sample web spider with mysql",
+	"dependencies":{
+		"request": "*",
+		"cheerio": "*",
+		"mysql": "2.0.0",
+		"async": "0.2.9"
+	}
+}
